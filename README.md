@@ -44,7 +44,7 @@ The supplied dataset contains **100,000 simulated galaxy stamps and 100 halo pos
 | Joint halo mass and source redshift | $M_{200c}=7.462\times10^{14}\,M_\odot/h$, $z_s=0.466$ |
 | Halo mass at fixed $z_s=0.6$ | $M_{200c}=4.686\times10^{14}\,M_\odot/h$ |
 
-The complete-data analysis uses a 120 × 120 grid; [run settings and summary](assets/coursework_summary.json) accompany the figure below. They are grid maxima under the specified model, rather than measurements of an observed survey. The data remain external to this repository, as required by the coursework instructions. [Data format and outputs](docs/data.md) describes how to use a local copy.
+The complete-data analysis uses a 120 × 120 grid; [run settings and summary](assets/coursework_summary.json) accompany the figure below. They are grid maxima under the specified model, rather than measurements of an observed survey. The input data are supplied separately and are not distributed here, in accordance with their usage conditions. [Data format and outputs](docs/data.md) describes how to use a local copy.
 
 ![Joint mass–redshift posterior from the complete supplied simulation.](assets/coursework_joint_posterior.png)
 
@@ -52,7 +52,7 @@ The complete-data analysis uses a 120 × 120 grid; [run settings and summary](as
 
 ## Method and interpretation
 
-The HSM components are observed image-shape parameters used as weak-shear proxies. The analysis does not apply PSF correction or shear-response calibration. The two direct moment estimators use the coursework convention $e_2=Q_{xy}/D$, where $D=Q_{xx}+Q_{yy}+2\sqrt{Q_{xx}Q_{yy}-Q_{xy}^2}$; this differs from the conventional reduced-shear second component by a factor of two.
+The HSM components are observed image-shape parameters used as weak-shear proxies. The analysis does not apply PSF correction or shear-response calibration. The two direct moment estimators use the definition $e_2=Q_{xy}/D$, where $D=Q_{xx}+Q_{yy}+2\sqrt{Q_{xx}Q_{yy}-Q_{xy}^2}$; this differs from the conventional reduced-shear second component by a factor of two.
 
 The likelihood uses per-bin standard errors and a diagonal covariance approximation. Repeated sources across halos and correlations between bins are not modelled. See [Method and interpretation](docs/method.md) for the estimator definitions, posterior normalisation and limits of the inference.
 
@@ -61,7 +61,7 @@ The likelihood uses per-bin standard errors and a diagonal covariance approximat
 | Notebook | Contents |
 | --- | --- |
 | [Synthetic walkthrough](notebooks/01_synthetic_walkthrough.ipynb) | Generate images, compare shape estimators, stack a profile and recover a mass posterior. |
-| [Simulation analysis](notebooks/02_coursework_analysis.ipynb) | Analyse external simulated inputs or inspect saved numerical results. |
+| [Simulation analysis](notebooks/02_simulation_analysis.ipynb) | Analyse external simulated inputs or inspect saved numerical results. |
 
 ## Repository structure
 

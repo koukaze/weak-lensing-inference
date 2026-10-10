@@ -2,7 +2,7 @@
 
 ## External coursework inputs
 
-The supplied data are not distributed in this repository. The coursework instructions require data and large generated files to remain outside the repository. Use a local copy through `A6_DATA_DIR` or `--data-dir`.
+The supplied data are not distributed in this repository. The coursework instructions require data and large generated files to remain outside the repository. Use a local copy through `LENSING_DATA_DIR` or `--data-dir`.
 
 | File | Shape and convention |
 | --- | --- |

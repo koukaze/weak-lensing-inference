@@ -11,14 +11,14 @@ from weak_lensing.pipeline import run_coursework
 def main() -> None:
     '''Parse input locations and run the coursework analysis.'''
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--data-dir', type=Path, default=os.environ.get('A6_DATA_DIR'))
+    parser.add_argument('--data-dir', type=Path, default=os.environ.get('LENSING_DATA_DIR'))
     parser.add_argument('--output-dir', type=Path, default=Path('outputs/coursework'))
     parser.add_argument('--grid-size', type=int, default=120)
     parser.add_argument('--max-sources', type=int)
     parser.add_argument('--batch-size', type=int, default=256)
     args = parser.parse_args()
     if args.data_dir is None:
-        parser.error('Provide --data-dir or set A6_DATA_DIR to the coursework input directory.')
+        parser.error('Provide --data-dir or set LENSING_DATA_DIR to the coursework input directory.')
 
     def progress(completed: int, total: int) -> None:
         '''Report measurement progress at approximately 10,000-source intervals.'''

@@ -25,17 +25,17 @@ The injected mass is $5\times10^{14}\,M_\odot/h$ and the source redshift is 0.6.
 
 ## Coursework inputs
 
-Point `A6_DATA_DIR` to the directory containing the supplied inputs:
+Point `LENSING_DATA_DIR` to the directory containing the supplied inputs:
 
 ```bash
-export A6_DATA_DIR="/path/to/a6/data"
+export LENSING_DATA_DIR="/path/to/lensing-data"
 python scripts/run_analysis.py --output-dir outputs/coursework
 ```
 
 Or pass the path directly:
 
 ```bash
-python scripts/run_analysis.py --data-dir "/path/to/a6/data" --output-dir outputs/coursework
+python scripts/run_analysis.py --data-dir "/path/to/lensing-data" --output-dir outputs/coursework
 ```
 
 The directory must contain `galaxy_stamps.fits`, `source_positions.txt` and `halo_positions.txt`. The FITS file is about 1.44 GB. Each source-position row must correspond to the image HDU with the same zero-based index, including the primary HDU. See [Data format and outputs](docs/data.md). The program reads the inputs in place and processes images in batches of 256; it does not copy them into the repository.
@@ -73,14 +73,14 @@ jupyter lab notebooks/01_synthetic_walkthrough.ipynb
 
 Select **Python (weak lensing)** and run all cells from a fresh kernel. The first notebook generates its own inputs and includes the figure shown in the README.
 
-The second notebook supports two modes. For a fresh coursework analysis, set `A6_DATA_DIR` before starting Jupyter. To inspect the numerical results of a completed command-line run without repeating image measurement:
+The second notebook supports two modes. For a fresh coursework analysis, set `LENSING_DATA_DIR` before starting Jupyter. To inspect the numerical results of a completed command-line run without repeating image measurement:
 
 ```bash
-export A6_RESULTS_DIR="$(pwd)/outputs/coursework"
-jupyter lab notebooks/02_coursework_analysis.ipynb
+export LENSING_RESULTS_DIR="$(pwd)/outputs/coursework"
+jupyter lab notebooks/02_simulation_analysis.ipynb
 ```
 
-`A6_RESULTS_DIR` takes precedence over `A6_DATA_DIR`. Unset it before requesting a fresh run. If neither is set, the notebook explains the required input and skips the data-dependent cells.
+`LENSING_RESULTS_DIR` takes precedence over `LENSING_DATA_DIR`. Unset it before requesting a fresh run. If neither is set, the notebook explains the required input and skips the data-dependent cells.
 
 ## Tests and interpretation
 
@@ -96,7 +96,7 @@ The tests cover analytic image moments, HSM shapes, tangential projection, bin b
 | Symptom | Check |
 | --- | --- |
 | `No module named weak_lensing` | Activate the environment, install the package and select its notebook kernel. |
-| Missing coursework files | Set `A6_DATA_DIR` to the external input directory, or use the synthetic example. |
+| Missing coursework files | Set `LENSING_DATA_DIR` to the external input directory, or use the synthetic example. |
 | Image/position count mismatch | Preserve every FITS HDU and catalogue row in their supplied order. |
 | No valid HSM inference bins | Check source coordinates, stamp quality, sample size and the 100–3,600 arcsec radial range. |
 | Sparse credible contours with a small grid | Increase `--grid-size`; a posterior concentrated in one cell may have no distinct 68% and 95% contour. |

@@ -1,10 +1,8 @@
 # References
 
-## Coursework materials
+## Model and data sources
 
-Peijing Pang, *Inferring Dark Matter Halo Mass from Weak Lensing Signals*, A6 coursework report and accompanying `A6CW.ipynb`, Cambridge MPhil in Data Intensive Science, June 2026.
-
-S. Gratton, N. MacCrann, F. McCarthy and B. Sherwin, *Cosmology Minor Module Coursework*, Cambridge MPhil in Data Intensive Science, Easter Term 2026. The coursework specifies the simulated-data analysis, radial bins, halo parameters and inference tasks. The supplied data must remain outside the repository under the coursework instructions.
+S. Gratton, N. MacCrann, F. McCarthy and B. Sherwin, *Cosmology*: specification for the simulated-data analysis, radial bins, halo parameters and inference tasks. The supplied data must remain outside the repository under the data-use instructions.
 
 ## NFW halo model
 
@@ -21,4 +19,4 @@ B. Rowe, M. Jarvis, R. Mandelbaum et al., *GalSim: The modular galaxy image simu
 - [HSM documentation](https://galsim-developers.github.io/GalSim/_build/html/hsm.html): `FindAdaptiveMom` measures adaptive image moments and returns `observed_shape`. This analysis uses its `g1` and `g2` components.
 - [NFW halo documentation](https://galsim-developers.github.io/GalSim/_build/html/nfwhalo.html): `NFWHalo` defines halo mass within an overdensity of 200 times the critical density, in units of $M_\odot/h$. Angular positions are in arcseconds. Calling `getShear` with `reduced=False` returns shear rather than reduced shear.
 
-The coursework team supplied the simulated galaxy stamps, source and halo positions, and the `nfw_theory.py` helper. This package evaluates NFW shear through GalSim's public `NFWHalo.getShear` interface.
+The course authors supplied the simulated galaxy stamps, source and halo positions, and the `nfw_theory.py` helper. This package evaluates NFW shear through GalSim's public `NFWHalo.getShear` interface.
