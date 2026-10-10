@@ -1,0 +1,34 @@
+{
+  "n_sources": 100000,
+  "n_halos": 100,
+  "invalid_shapes": {
+    "unweighted": 6837,
+    "weighted": 4,
+    "hsm": 0
+  },
+  "valid_hsm_inference_bins": 10,
+  "joint_best_mass_msun_over_h": 746218487394958.0,
+  "joint_best_source_redshift": 0.46647058823529414,
+  "fixed_source_redshift": 0.6,
+  "fixed_z_best_mass_msun_over_h": 468571428571428.56,
+  "grid_size": 120,
+  "mass_range_msun_over_h": [
+    300000000000000.0,
+    1480000000000000.0
+  ],
+  "source_redshift_range": [
+    0.31,
+    0.8
+  ],
+  "n_bins": 10,
+  "radius_range_arcsec": [
+    100.0,
+    3600.0
+  ],
+  "concentration": 4,
+  "halo_redshift": 0.3,
+  "omega_m": 0.3,
+  "omega_lam": 0.7,
+  "input_kind": "Supplied coursework simulations",
+  "source_subset": false
+}

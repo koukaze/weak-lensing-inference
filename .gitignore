@@ -1,0 +1,21 @@
+# Environments and generated Python files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+build/
+dist/
+.DS_Store
+.env
+.env.*
+
+# Coursework input files and generated outputs
+data/
+*.fits
+*.fits.gz
+source_positions.txt
+halo_positions.txt
+outputs/
